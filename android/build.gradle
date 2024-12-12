@@ -1,0 +1,45 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Actualiza a la última versión de Android Gradle Plugin
+        classpath 'com.android.tools.build:gradle:8.7.2'  // Actualizado
+
+        // Actualiza la clase de Google Services a la versión más reciente
+        classpath 'com.google.gms:google-services:4.4.0'
+
+        // Asegúrate de usar la versión más reciente de Kotlin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0"  // Actualizado a la última versión estable de Kotlin
+    }
+}
+
+apply from: "variables.gradle"
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+
+        // Si es necesario, agrega otros repositorios
+        maven {
+            url 'https://pkgs.dev.azure.com/OutSystemsRD/9e79bc5b-69b2-4476-9ca5-d67594972a52/_packaging/PublicArtifactRepository/maven/v1'
+            name 'Azure'
+            credentials {
+                username = "optional"
+                password = ""
+            }
+            content {
+                includeGroup "com.github.outsystems"
+            }
+        }
+    }
+}
+
+// Task para limpiar el proyecto
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

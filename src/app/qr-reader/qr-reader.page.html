@@ -1,0 +1,22 @@
+<ion-content>
+  <div class="qr-reader-container">
+    
+    
+    <!-- Mostrar el código QR escaneado -->
+    <ion-item *ngIf="scannedCode">
+      <ion-label>Escaneo exitoso</ion-label>
+      <ion-input [(ngModel)]="scannedCode" placeholder="Código escaneado" readonly></ion-input>
+    </ion-item>
+
+    <!-- Mensaje si no se ha escaneado ningún código -->
+    <ion-item *ngIf="!scannedCode">
+      <ion-label color="medium">Escanea un código QR para continuar.</ion-label>
+    </ion-item>
+
+    <!-- Botón para iniciar el escaneo con un ícono -->
+    <ion-button expand="full" (click)="scanQRCode()">
+      <ion-icon name="camera-outline"></ion-icon> <!-- Icono de cámara -->
+      Iniciar escaneo
+    </ion-button>
+  </div>
+</ion-content>

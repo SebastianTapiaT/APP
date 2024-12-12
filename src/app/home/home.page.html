@@ -1,0 +1,41 @@
+<ion-content>
+  <div class="login-container">
+    <!-- Logo de usuario centrado -->
+    <ion-img src="assets/logo.png" class="user-logo"></ion-img> <!-- Asegúrate de agregar el logo en la carpeta assets -->
+
+    <!-- Título de login -->
+    <h2 class="app-name">RegistrAPP</h2> <!-- Título centrado -->
+
+    <!-- Formulario de inicio de sesión -->
+    <form (submit)="login()">
+      <!-- Campo de usuario -->
+      <ion-item>
+        <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Nombre de usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="username" name="username" required></ion-input>
+      </ion-item>
+
+      <!-- Campo de contraseña -->
+      <ion-item>
+        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
+
+      <!-- Eliminar checkbox "Recordarme" y solo texto de "Olvidaste tu contraseña?" -->
+      <ion-item lines="none">
+        <ion-label class="forgot-password-text">
+          <a routerLink="/reset-password">¿Olvidaste tu contraseña?</a>
+        </ion-label>
+      </ion-item>
+
+      <!-- Botón de Login -->
+      <ion-button expand="full" type="submit" class="login-btn">INGRESAR</ion-button> <!-- Botón de Login -->
+    </form>
+
+    <!-- Convertir "Crear una cuenta" en una frase larga subrayada -->
+    <ion-item lines="none">
+      <ion-label class="create-account-text">¿Crear una cuenta?</ion-label>
+    </ion-item>
+  </div>
+</ion-content>

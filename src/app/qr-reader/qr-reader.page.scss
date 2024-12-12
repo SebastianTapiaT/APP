@@ -1,0 +1,54 @@
+.qr-reader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Alinea los elementos horizontalmente en el centro */
+  justify-content: center;  /* Alinea los elementos verticalmente en el centro */
+  height: 100%;  /* Asegura que el contenedor ocupe toda la altura disponible */
+  padding: 20px;  /* Añade espacio dentro del contenedor */
+  background: linear-gradient(to bottom, #ff7f50, #ffcc00);  /* Fondo con gradiente naranja-amarillo */
+  border-radius: 25px;  /* Bordes redondeados para el contenedor */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+}
+
+ion-item {
+  margin-bottom: 20px;  /* Añade espacio entre los elementos */
+  width: 100%;
+}
+
+ion-input {
+  border-radius: 10px;  /* Bordes redondeados para el input */
+}
+
+ion-label {
+  font-weight: bold;
+}
+
+ion-button {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 15px;  /* Bordes redondeados para el botón */
+  padding: 12px 20px;
+  width: 100%;  /* Asegura que el botón ocupe todo el ancho disponible */
+  max-width: 300px;  /* Limita el ancho máximo del botón para que no sea muy grande */
+}
+
+ion-icon {
+  margin-right: 10px;  /* Espacio entre el icono y el texto */
+}
+
+ion-item[lines="none"] {
+  margin-bottom: 0;  /* Elimina el margen adicional de este item */
+}
+
+ion-label.forgot-password-text {
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+ion-label.forgot-password-text:hover {
+  text-decoration: underline;  /* Subraya el texto al pasar el mouse */
+}
